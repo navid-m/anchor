@@ -13,7 +13,6 @@ import std.traits;
 
 public class AnchorDB
 {
-private:
     string dbPath;
     string dataFilePath;
     File dataFile;

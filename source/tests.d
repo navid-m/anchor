@@ -11,7 +11,7 @@ unittest
         int age;
     }
 
-    auto db = new TuskDB("./db");
+    auto db = new AnchorDB("./db");
 
     db.put("user1", Person("Alice", 30));
     db.put("user2", Person("Bob", 25));
