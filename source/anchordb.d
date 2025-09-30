@@ -20,7 +20,7 @@ public class AnchorDB
     private bool[string] deleted;
 
     /** 
-     * Constructs a new TuskDB instance.
+     * Constructs a new AnchorDB instance.
      *
      * Params:
      *   path = Path to the database directory.
