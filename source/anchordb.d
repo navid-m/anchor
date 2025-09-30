@@ -13,11 +13,12 @@ import std.traits;
 
 public class AnchorDB
 {
-    private string dbPath;
-    private string dataFilePath;
-    private File dataFile;
-    private string[string] index;
-    private bool[string] deleted;
+private:
+    string dbPath;
+    string dataFilePath;
+    File dataFile;
+    string[string] index;
+    bool[string] deleted;
 
     /** 
      * Constructs a new AnchorDB instance.
@@ -102,7 +103,7 @@ public class AnchorDB
         saveIndex();
     }
 
-    private void loadIndex()
+    void loadIndex()
     {
         auto indexFile = buildPath(dbPath, "index.json");
         if (exists(indexFile))
@@ -127,7 +128,7 @@ public class AnchorDB
         replayLog();
     }
 
-    private void replayLog()
+    void replayLog()
     {
         if (!exists(dataFilePath))
             return;
@@ -179,7 +180,7 @@ public class AnchorDB
         deleted = null;
     }
 
-    private void saveIndex()
+    void saveIndex()
     {
         auto indexFile = buildPath(dbPath, "index.json");
         JSONValue json;
