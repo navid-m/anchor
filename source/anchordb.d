@@ -102,7 +102,7 @@ public class AnchorDB
         saveIndex();
     }
 
-    void loadIndex()
+    private void loadIndex()
     {
         auto indexFile = buildPath(dbPath, "index.json");
         if (exists(indexFile))
@@ -127,7 +127,7 @@ public class AnchorDB
         replayLog();
     }
 
-    void replayLog()
+    private void replayLog()
     {
         if (!exists(dataFilePath))
             return;
