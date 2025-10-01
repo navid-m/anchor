@@ -1,4 +1,4 @@
-module anchordb;
+module anchor.db;
 
 import std.json;
 import std.file;

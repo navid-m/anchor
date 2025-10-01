@@ -2,7 +2,7 @@ module tests;
 
 unittest
 {
-    import anchordb;
+    import anchor.db;
     import std.stdio;
 
     struct Person
